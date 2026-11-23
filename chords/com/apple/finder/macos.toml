@@ -1,0 +1,113 @@
+name = 'Finder'
+
+[on.menu]
+file = '@keychord/chords-menu/js/menu.js'
+
+[chords]
+'?g' = { name = 'Goto' }
+'gr' = { name = 'Goto Recents', '@input:menu' = ['BY_PATH', ['Go', 'Recents']] }
+'gd' = { name = 'Goto Downloads', '@input:menu' = ['BY_PATH', ['Go', 'Downloads']] }
+'gdo' = { name = 'Goto Documents', '@input:menu' = ['BY_PATH', ['Go', 'Documents']] }
+'gde' = { name = 'Goto Desktop', shortcut = 'cmd+shift+d' }
+'gh' = { name = 'Goto Home', shortcut = 'cmd+shift+h' }
+'gc' = { name = 'Goto Computer', shortcut = 'cmd+shift+c' }
+'gad' = { name = 'Goto AirDrop', shortcut = 'cmd+shift+r' }
+'gn' = { name = 'Goto Network', shortcut = 'cmd+shift+k' }
+'gid' = { name = 'Goto iCloud Drive', shortcut = 'cmd+shift+i' }
+'gs' = { name = 'Goto Shared', '@input:menu' = ['BY_PATH', ['Go', 'Shared']] }
+'ga' = { name = 'Goto Applications', shortcut = 'cmd+shift+a' }
+'gu' = { name = 'Goto Utilities', '@input:menu' = ['BY_PATH', ['Go', 'Utilities']] }
+'gf' = { name = 'Goto Folder', shortcut = 'cmd+shift+g' }
+'gt' = { name = 'Goto Trash', shell = 'open -b com.apple.finder "$HOME/.Trash"' }
+
+'?d' = { name = 'Directory' }
+'du' = { name = 'Directory: Up', shortcut = 'cmd+up' }
+'duw' = { name = 'Directory: Up Window', '@input:menu' = [
+  'BY_KEY',
+  [
+    'Go',
+    'Enclosing Folder in New Window',
+  ],
+] }
+
+'?f' = { name = 'File' }
+'fa' = { name = 'File: Alias', shortcut = 'ctrl+cmd+a' }
+'fe' = { name = 'File: Eject', '@input:menu' = ['BY_PATH', ['File', 'Eject']] }
+'fc' = { name = 'File: Compress', '@input:menu' = ['BY_PATH', ['File', 'Compress']] }
+'fr' = { name = 'File: Rename', '@input:menu' = ['BY_PATH', ['File', 'Rename']] }
+'ft' = { name = 'File: Trash', '@input:menu' = ['BY_PATH', ['File', 'Move to Trash']] }
+'fd' = { name = 'File: Duplicate', shortcut = 'cmd+d' }
+'fq' = { name = 'File: Quick Look', '@input:menu' = ['BY_PATH', ['File', 'Quick Look']] }
+'fo' = { name = 'File: Open', shortcut = 'cmd+down' }
+
+'?a' = { name = 'as' }
+'ai' = { name = 'as Icons', '@input:menu' = ['BY_PATH', ['View', 'as Icons']] }
+'al' = { name = 'as List', '@input:menu' = ['BY_PATH', ['View', 'as List']] }
+'ac' = { name = 'as Columns', '@input:menu' = ['BY_PATH', ['View', 'as Columns']] }
+'ag' = { name = 'as Gallery', '@input:menu' = ['BY_PATH', ['View', 'as Gallery']] }
+
+'?s' = { name = 'Sort' }
+'sn' = { name = 'Sort: Name', '@input:menu' = ['BY_PATH', ['View', 'Sort By', 'Name']] }
+'sk' = { name = 'Sort: Kind', '@input:menu' = ['BY_PATH', ['View', 'Sort By', 'Kind']] }
+'so' = { name = 'Sort: Opened Date', '@input:menu' = [
+  'BY_PATH',
+  [
+    'View',
+    'Sort By',
+    'Date Last Opened',
+  ],
+] }
+'sa' = { name = 'Sort: Added Date', '@input:menu' = ['BY_PATH', ['View', 'Sort By', 'Date Added']] }
+'sm' = { name = 'Sort: Modified Date', '@input:menu' = [
+  'BY_PATH',
+  [
+    'View',
+    'Sort By',
+    'Date Modified',
+  ],
+] }
+'sc' = { name = 'Sort: Created Date', '@input:menu' = [
+  'BY_PATH',
+  [
+    'View',
+    'Sort By',
+    'Date Created',
+  ],
+] }
+'ss' = { name = 'Sort: Size', '@input:menu' = ['BY_PATH', ['View', 'Sort By', 'Size']] }
+'st' = { name = 'Sort: Tags', '@input:menu' = ['BY_PATH', ['View', 'Sort By', 'Tags']] }
+
+'?c' = { name = 'Clean' }
+'cn' = { name = 'Clean: Name', '@input:menu' = ['BY_PATH', ['View', 'Clean Up By', 'Name']] }
+'ck' = { name = 'Clean: Kind', '@input:menu' = ['BY_PATH', ['View', 'Clean Up By', 'Kind']] }
+'cm' = { name = 'Clean: Modified Date', '@input:menu' = [
+  'BY_PATH',
+  [
+    'View',
+    'Clean Up By',
+    'Date Modified',
+  ],
+] }
+'cc' = { name = 'Clean: Created Date', '@input:menu' = [
+  'BY_PATH',
+  [
+    'View',
+    'Clean Up By',
+    'Date Created',
+  ],
+] }
+'cs' = { name = 'Clean: Size', '@input:menu' = ['BY_PATH', ['View', 'Clean Up By', 'Size']] }
+'ct' = { name = 'Clean: Tags', '@input:menu' = ['BY_PATH', ['View', 'Clean Up By', 'Tags']] }
+
+'?t' = { name = 'Toggle' }
+'ta' = { name = 'Tabs: All', '@input:menu' = ['BY_PATH', ['View', 'Show All Tabs']] }
+'tg' = { name = 'Toggle: Groups', '@input:menu' = ['BY_PATH', ['View', 'Use Groups']] }
+'tt' = { name = 'Toggle: Tabs', '@input:menu' = ['SEARCH', 'Tab Bar'] }
+'th' = { name = 'Toggle: Hidden', shortcut = 'cmd+shift+.' }
+'ts' = { name = 'Toggle Sidebar', shortcut = 'cmd+ctrl+s' }
+'tp' = { name = 'Toggle Preview', shortcut = 'cmd+shift+p' }
+'tb' = { name = 'Toggle Status Bar', '@input:menu' = ['SEARCH', 'Status Bar'] }
+'to' = { name = 'Toggle Toolbar', shortcut = 'cmd+opt+t' }
+'t/' = { name = 'Toggle Path Bar', shortcut = 'cmd+opt+p' }
+'te' = { name = 'Trash: Empty', '@input:menu' = ['BY_PATH', ['Finder', 'Empty Trash…']] }
+'tef' = { name = 'Trash: Empty Force', '@input:menu' = ['BY_KEY', ['Finder', 'Empty Trash']] }
